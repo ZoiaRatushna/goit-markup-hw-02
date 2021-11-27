@@ -2,17 +2,19 @@
     --text-primery-color: #212121;
     --text-secondary-color: #2196F3;
     --primary-font: 'Raleway';
-    --secondary-font: 'Roboto';   
+    --main-font: 'Roboto';   
 }
 ---------------------------------------------------
 
 html, body{
     margin: 0;
     padding: 0;
-  }
+    font-family: var(--main-font), Arial, Helvetica, sans-serif;
+    color: var(--text-primery-color);
+}
 
 /* Webstudio navigation container */
-header {
+.header {
     width: 100%;
     height: 80px;
     background:#FFFFFF;
@@ -21,39 +23,31 @@ header {
     justify-content: space-between;
 }
 
-header .logo {
+.header .logo {
     margin-left: 215px;
 }
 
-header nav {
+.header nav {
     position: absolute;
     left: 453px;
 }
 
-header nav ul, li {
+.header nav ul, li {
     display: inline-block;
 }
 
-header a {
+.header a {
     margin-top: 24px;
-}
-
-header ul {
-    margin-top: 32px;
-}
-
-header .right {
-    position: absolute;
-    right: 215px;
-}
-
-a {
     text-decoration:none;
 }
 
-ul, li {
-    list-style: none;
-    display: inline-block;
+.header ul {
+    margin-top: 32px;
+}
+
+.header .right {
+    position: absolute;
+    right: 215px;
 }
 
 .web {
@@ -82,12 +76,12 @@ ul, li {
 
 /* navigation link */
 .nav-link {
-    color:var(--text-primery-color);
     margin-right: 50px;
+    color: var(--text-primery-color);
 }
 
 .nav-link:hover {
-    color:var(--text-secondary-color);
+    color: var(--text-secondary-color);
 }
 
 /* contacts link */
@@ -116,7 +110,6 @@ ul, li {
 .effective-solutions-container h1 {
     max-width: 50%;
     text-align: center;
-    font-family: var(--secondary-font);
     font-style: normal;
     font-weight: 900;
     font-size: 44px;
@@ -130,10 +123,11 @@ ul, li {
     width: 200px;
     height: 50px;
     background-color: var(--text-secondary-color);
-    font-family: var(--secondary-font);
+    font-family: var(--main-font);
     font-weight: 700;
     color:#FFFFFF ;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 /* our advantages content */
@@ -159,19 +153,14 @@ ul, li {
 }
 
 .our-advantages-section h3 {
-    font-family: var(--secondary-font);
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--text-primery-color);
 }  
 
 .our-advantages-section p {
-    font-family: var(--secondary-font);
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
@@ -191,14 +180,12 @@ ul, li {
     flex-wrap: nowrap;
     justify-content: center;
 
-    font-family: var(--secondary-font);
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--text-primery-color);
 }
 
 .what-we-are-doing-section ul {
@@ -231,14 +218,12 @@ ul, li {
     flex-wrap: nowrap;
     justify-content: center;
 
-    font-family: var(--secondary-font);
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--text-primery-color);
 }
 
 .our-comand-section ul {
@@ -268,7 +253,6 @@ ul, li {
 }
 
 .our-comand-section p {
-    font-weight: 400;
     color:#757575;
 }
 
@@ -283,14 +267,12 @@ ul, li {
     flex-wrap: nowrap;
     justify-content: center;
 
-    font-family: var(--secondary-font);
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--text-primery-color);
 }
 
 .our-portfolio-section ul {
@@ -310,11 +292,12 @@ ul, li {
     padding-right: 22px;
     height: 50px;
     background-color: white;
-    font-family: var(--secondary-font);
+    cursor: pointer;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
-    color:var(--text-primery-color);
+    font-family: var(--main-font);
     border: none;
     border-radius: 4px;
 }
@@ -322,7 +305,7 @@ ul, li {
 .our-portfolio-section button:hover {
     height: 50px;
     background-color: var(--text-secondary-color);
-    font-family: var(--secondary-font);
+
     color:#FFFFFF ;
     border-radius: 4px;
 }
@@ -348,12 +331,11 @@ ul, li {
 }
 
 .our-portfolio-section p {
-    font-weight: 400;
     color:rgba(117, 117, 117, 1)
 }
 
 /* footer section */
-footer {
+.footer {
     padding-left: 215px;
     padding-top: 60px;
     width: auto;
@@ -361,8 +343,11 @@ footer {
     background: #2F303A;
 }
 
-footer ul {
-    font-family: var(--secondary-font);
+.footer a {
+    text-decoration:none;
+}
+
+.footer ul {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -372,20 +357,20 @@ footer ul {
     padding-inline-start: 0;
 }
 
-footer li {
+.footer li {
     display: block;
 }
 
-footer .white {
+.footer .white {
     color: white;
 }
 
-footer .white:hover {
+.footer .white:hover {
     color: var(--text-secondary-color);
 }
-footer .grey {
+.footer .grey {
     color: rgba(255, 255, 255, 0.6);
 }
-footer .grey:hover {
+.footer .grey:hover {
     color: var(--text-secondary-color);
 }
