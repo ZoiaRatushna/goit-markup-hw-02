@@ -4,9 +4,8 @@
     --primary-font: 'Raleway';
     --main-font: 'Roboto';   
 }
----------------------------------------------------
 
-html, body{
+body {
     margin: 0;
     padding: 0;
     font-family: var(--main-font), Arial, Helvetica, sans-serif;
@@ -94,20 +93,16 @@ html, body{
 }
 
 /* effective solutions container */
-.effective-solutions-container {
-    width: 100%;
+.effective-solutions {
     height: 600px;
     background: #2F303A;
 
-    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-content: center;
     align-items: center;
 }
 
-.effective-solutions-container h1 {
+.effective-solutions h1 {
     max-width: 50%;
     text-align: center;
     font-style: normal;
@@ -119,23 +114,25 @@ html, body{
     color: #FFFFFF;
 }
 
-.effective-solutions-container button {
+.effective-solutions button {
     width: 200px;
     height: 50px;
     background-color: var(--text-secondary-color);
     font-family: var(--main-font);
     font-weight: 700;
+    font-size: 16px;
+    line-height: 1.8;
     color:#FFFFFF ;
     border-radius: 4px;
     cursor: pointer;
 }
 
 /* our advantages content */
-.our-advantages-section {
+.our-advantages {
     margin-top: 94px;
 }
 
-.our-advantages-section ul {
+.flex-container {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
@@ -146,13 +143,13 @@ html, body{
     padding-inline-start: 0;
 }
 
-.our-advantages-section li {
+.our-advantages li {
     width: 270px;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.our-advantages-section h3 {
+.our-advantages h3 {
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
@@ -160,24 +157,21 @@ html, body{
     text-transform: uppercase;
 }  
 
-.our-advantages-section p {
+.our-advantages p {
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: #757575;
-    
 }
 
 /* what we are doing title */
-.what-we-are-doing-section {
+.what-we-are-doing {
     margin-top: 94px;
     margin-bottom: 94px;
 }
 
-.what-we-are-doing-section h2 {
+.page-tittles {
     width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
 
     font-style: normal;
@@ -188,18 +182,13 @@ html, body{
     letter-spacing: 0.03em;
 }
 
-.what-we-are-doing-section ul {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-
+.what-we-are-doing ul {
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
 }
 
-.what-we-are-doing-section li {
+.what-we-are-doing li {
     width: 370px;
     height: 294px;
     margin-left: 10px;
@@ -207,37 +196,12 @@ html, body{
 }
 
 /* our comand section */
-.our-comand-section {
+.our-command {
     margin-top: 50px;
     margin-bottom: 94px;
 }
 
-.our-comand-section h2 {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-
-    font-style: normal;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1.16;
-    text-align: center;
-    letter-spacing: 0.03em;
-}
-
-.our-comand-section ul {
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
-}
-
-.our-comand-section li {
+.our-command li {
     width: 270px;
     height: 368px;
     margin-left: 15px;
@@ -247,24 +211,22 @@ html, body{
     line-height: 1.18;
 }
 
-.our-comand-section h3 {
+.our-command h3 {
     font-weight: bold;
     color: rgba(33, 33, 33, 1);
 }
 
-.our-comand-section p {
+.our-command p {
     color:#757575;
 }
 
 /* our portfolio section */
-.our-portfolio-section {
+.our-portfolio {
     margin-top: 94px;
 }
 
-.our-portfolio-section h2 {
+.our-portfolio h2 {
     width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
     justify-content: center;
 
     font-style: normal;
@@ -275,19 +237,13 @@ html, body{
     letter-spacing: 0.03em;
 }
 
-.our-portfolio-section ul {
+.our-portfolio ul {
     margin-left: 5%;
     width: 90%;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
 }
 
-.our-portfolio-section button {
+.our-portfolio button {
     padding-left: 22px;
     padding-right: 22px;
     height: 50px;
@@ -302,7 +258,7 @@ html, body{
     border-radius: 4px;
 }
 
-.our-portfolio-section button:hover {
+.our-portfolio button:hover {
     height: 50px;
     background-color: var(--text-secondary-color);
 
@@ -310,12 +266,12 @@ html, body{
     border-radius: 4px;
 }
 
-.our-portfolio-section .img-portfolio {
+.our-portfolio .img-portfolio {
     margin-top: 54px;
     margin-bottom: 94px;
 }
 
-.our-portfolio-section .img-portfolio li {
+.our-portfolio .img-portfolio li {
     width: 370px;
     height: 404px;
     margin-left: 15px;
@@ -325,13 +281,17 @@ html, body{
     line-height: 1.18;
 }
 
-.our-portfolio-section h3 {
+.our-portfolio h3 {
     font-weight: bold;
     color: rgba(33, 33, 33, 1);
 }
 
-.our-portfolio-section p {
+.our-portfolio p {
     color:rgba(117, 117, 117, 1)
+}
+
+.portfolio-link { 
+    text-decoration: none;
 }
 
 /* footer section */
@@ -344,7 +304,7 @@ html, body{
 }
 
 .footer a {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 .footer ul {
@@ -361,16 +321,16 @@ html, body{
     display: block;
 }
 
-.footer .white {
+.footer .footer-link {
     color: white;
 }
 
-.footer .white:hover {
+.footer .footer-link:hover {
     color: var(--text-secondary-color);
 }
-.footer .grey {
+.footer .footer-address, .footer-tel {
     color: rgba(255, 255, 255, 0.6);
 }
-.footer .grey:hover {
+.footer .footer-address:hover, .footer-tel:hover {
     color: var(--text-secondary-color);
 }
